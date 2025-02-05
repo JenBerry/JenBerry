@@ -333,7 +333,7 @@ useSeoMeta({
   description: description,
   ogDescription: description,
   ogTitle: "JJMB - Freelance Web Developer",
-  ogImage: "/public/img/JJMB_kalisti.jpg",
+  ogImage: "/public/img/JJMB_kalisti_sm.jpg",
   ogType: "website",
 });
 </script>
