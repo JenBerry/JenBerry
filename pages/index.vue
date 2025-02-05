@@ -116,8 +116,8 @@
           v-if="category === '' || category === 'Coding'",
           title="International School of Temple Arts"
           subtitle="Ongoing part-time/ad-hoc work 2019 - present"
-          imageDesktop="/img/ista/home_desktop_1440.jpg"
-          imageMobile="/img/ista/home_mobile_390.jpg"
+          imageDesktop="/img/ista/home_desktop_1440.webp"
+          imageMobile="/img/ista/home_mobile_390.webp"
           category="Coding"
           :animate="true"
           logo="/img/logos/ISTA_Logo.svg"
@@ -161,8 +161,8 @@
           v-if="category === '' || category === 'Web Builder'",
           title="Cyrus Wild"
           subtitle="Built website in Kajabi - 2024"
-          imageDesktop="/img/cyrus/cyrus_home_desktop_1440.jpg"
-          imageMobile="/img/cyrus/cyrus_home_mobile_390.jpg"
+          imageDesktop="/img/cyrus/cyrus_home_desktop_1440.webp"
+          imageMobile="/img/cyrus/cyrus_home_mobile_390.webp"
           category="Web Builder"
           :animate="true"
           logo="/img/logos/Cyrus_Wild_Logo.png"
