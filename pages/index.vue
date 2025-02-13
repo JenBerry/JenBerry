@@ -123,7 +123,7 @@
 </template>
 <script setup lang="ts">
 const description =
-  "Experienced Full-Stack Web Developer with expertise in Vue.js (Nuxt 3, Vue 2), Python (Flask), and Node.js (Express), with over a decade of international freelance expertise. Intelligent, quick to learn, and especially adept at bridging technical and graphical teams (left-brain / right-brain integration).";
+  "Experienced Full-Stack Web Developer with expertise in Vue.js (Nuxt 3, Vue 3), Python (Flask), and Node.js (Express), with over a decade of international freelance expertise. Intelligent, quick to learn, and especially adept at bridging technical and graphical teams (left-brain / right-brain integration).";
 
 useSeoMeta({
   title: "JJMB - Freelance Web Developer",
