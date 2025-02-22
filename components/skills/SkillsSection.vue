@@ -5,6 +5,8 @@
       code Frontend
     div.d-flex.flex-wrap.ga-2.justify-center.justify-md-start.mt-2
       v-chip 
+        code JavaScript
+      v-chip 
         code TypeScript
       v-chip 
         code Vue3
@@ -16,8 +18,6 @@
         code HTML
       v-chip 
         code CSS
-      v-chip 
-        code JavaScript
       v-chip 
         code SVG Animations
       v-chip 
@@ -47,7 +47,7 @@
       v-chip
         code Authentication
       v-chip
-        code Input sanitation
+        code Input Sanitation
       v-chip
         code WebSockets
       v-chip
@@ -64,15 +64,13 @@
       v-chip
         code Google Cloud
       v-chip
-        code CI/CD (GitHub Actions)
-      v-chip
         code SSR
       v-chip
         code SPA
       v-chip 
         code SEO
     h3.mt-4
-      code Web Builders and UIs
+      code Web Builders and No-Code
     div.d-flex.flex-wrap.ga-2.justify-center.justify-md-start.mt-2
       v-chip 
         code Kajabi

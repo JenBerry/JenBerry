@@ -12,7 +12,7 @@
             h5.text-h7.text-orange-accent-1.text-body-1 {{subtitle}}
         div.mb-8.text-body-1.px-4
           slot
-        v-row(align="center" justify="center")
+        v-row.d-print-none(align="center" justify="center")
           v-col(cols="12" md="9")
             div
               v-img.screenshot-thumbnail.rounded-lg(

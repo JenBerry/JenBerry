@@ -1,7 +1,7 @@
 <template lang="pug">
   section.mt-16
     h3.text-h4.mb-8.pt-4.text-center.text-md-left Recent Projects
-    div.d-flex.ga-4.flex-column.flex-md-row.align-md-center
+    div.d-flex.ga-4.flex-column.flex-md-row.align-md-center.d-print-none
       span Filter By:
       div
         v-btn(variant="tonal" @click="category = category == 'Coding' ? '' : 'Coding'" :active="category == 'Coding'" active-color='orange' block) Coding Projects
@@ -43,7 +43,7 @@
           | RESTful API design, authentication & authorization, caching, rate limiting
         li 
           strong Security: 
-          | Role-based access control (RBAC), nuxt-security, secure headers, API security best practices
+          | Role-based access control (RBAC), JWT Authentication, nuxt-security, secure headers, API security best practices
         li 
           strong Cloud & Infrastructure: 
           | Google Cloud Platform (GCP), Google Cloud Storage, Docker, CI/CD with GitHub Actions
@@ -55,7 +55,7 @@
           | Mailchimp, Mandrill (email), Google Analytics, Umami, Simple Analytics
         li 
           strong Performance & Optimization: 
-          | Image processing (@nuxt/image), server-side compression, database indexing
+          | Image processing (@nuxt/image), server-side compression
         li 
           strong Content Management & UI Components: 
           | TipTap (rich text editor), dynamic dashboards, authentication panel
@@ -132,16 +132,13 @@
       ul.pl-4
         li
           strong.text-orange-accent-1 Vue.js (v2) Frontend: 
-          | Virtual event spaces, real-time user presence, multi-language support (i18n), dynamic UI components.
+          | Virtual event spaces, real-time user presence, dynamic UI components.
         li
           strong.text-orange-accent-1 Node.js Backend: 
           | Express API, MySQL database, authentication, and event configuration via JSON.
         li
           strong.text-orange-accent-1 Real-Time Features: 
           | Integrated Socket.IO for live user interaction and Jitsi for video conferencing.
-        li
-          strong.text-orange-accent-1 Performance & Accessibility: 
-          | Optimized for desktop users with Chrome-specific enhancements.
       p.mt-2 This project demonstrates my ability to build interactive real-time applications, integrate live communication tools, and create scalable event-based platforms.
       p.mt-2
         strong.text-orange-accent-1 Technical Skills:
@@ -156,18 +153,32 @@
           strong Real-Time Communication: 
           | WebSockets, Socket.IO
         li 
-          strong Authentication & Security: 
-          User authentication, session handling
-        li 
-          strong Internationalization: 
-          Multi-language support (i18n)
-        li 
           strong Third-Party Integrations: 
           | Jitsi (video conferencing)
         li 
           strong Configuration Management: 
-          |JSON-based event customization (agora-conf.json)
+          |JSON-based event customization
         v-btn.mt-4(href="https://hello.atypiclabs.com/" target="_blank" rounded="xl" color="orange" variant="flat")  View Live Website
+    
+    ProjectCard(
+      v-if="category === '' || category === 'Coding'",
+      title="Flicks"
+      subtitle="Movie & Entertainment Platform - 2019-2020"
+      videoDesktop="/img/flicks/flicks-desktop.webm"
+      videoMobile="/img/flicks/flicks-mobile.webm"
+      category="Coding"
+      logo="/img/logos/Flicks_Logo.jpg"
+    )
+      p Developed features for Flicks, a multi-region movie platform serving New Zealand, Australia, South Africa, and the UK. Built with Node.js (Express.js) and Pug templating, the platform delivers movie listings, streaming service integrations, and user watchlists. Enhanced user experience with a mobile-first, responsive design.
+      p.mt-2
+        strong.text-orange-accent-1 Technical Skills:
+      ul.pl-4
+        li Frontend: Pug (templating), HTML, SCSS, JavaScript, Responsive/Mobile-First Design
+        li Backend: Node.js, Express.js
+        li Streaming & Content: Movie Listings, Streaming Service Integrations (Netflix, Stan), Sports Content
+        li Design: Zeplin
+        li Project Management: Asana
+
     
     ProjectCard(
       v-if="category === '' || category === 'Coding'",
@@ -190,13 +201,31 @@
           span.text-orange-accent-1 SVG animations 
           | and ensured cross-browser compatibility.
         v-btn.mt-4(href="https://www.lv.com" target="_blank" rounded="xl" color="orange" variant="flat")  View Live Website
+
+    ProjectCard(
+      v-if="category === '' || category === 'Coding'",
+      title="Wolf & Badger"
+      subtitle="E-Commerce Platform Frontend Development 2016 - 2018"
+      category="Coding"
+      logo="/img/logos/Wolf_and_Badger_Logo.png"
+      videoDesktop="/img/wolf_and_badger/wolf-and-badger-desktop.mp4"
+      videoMobile="/img/wolf_and_badger/wolf-and-badger-mobile.webm"
+    )
+      p Worked on Wolf & Badger’s e-commerce platform, a Django-based marketplace for designer products. Built with Mezzanine CMS, the platform supported multi-currency transactions, international shipping, and custom dashboards for designers and store management. Contributed to frontend development, ensuring a responsive, visually polished user experience.
+      p.mt-2
+        strong.text-orange-accent-1 Technical Skills:
+      ul.pl-4
+        li Frontend: HTML, CSS, JavaScript, jQuery, SCSS, Responsive Design
+        li Backend: Django (Python), Mezzanine CMS, PostgreSQL
+        li Third-Party Integrations:  Cloudinary
     ProjectCard(
       v-if="category === '' || category === 'Coding'",
       title="Bond & Coyne"
       subtitle="Responsive Website Development - 2016"
       videoDesktop="/img/bond_and_coyne/bndandcoyne.webm"
+      videoMobile="/img/bond_and_coyne/bond-and-coyne-mobile.webm"
       category="Coding"
-      logo="/img/logos/Bond_and_coyne_logo.jpg"
+      logo="/img/logos/Bond_and_coyne.png"
     )
       p Developed a responsive website for a branding agency using modern frontend and templating technologies.
       ul.pl-4
@@ -225,11 +254,43 @@
         li Dependency Management: Composer (PHP), Bower (Frontend)
         li Responsive Design & UI: Grid-based layouts, mobile-first development
       v-btn.mt-4(href="https://github.com/JenBerry/bondandcoynewebsite" target="_blank" rounded="xl" color="orange" variant="flat")  View Code on Github
+    ProjectCard(
+      v-if="category === '' || category === 'Coding'",
+      title="Huawei"
+      subtitle="Huawei Consumer Website – Front-End Development 2016"
+      category="Coding"
+      logo="/img/logos/Huawei-Logo.svg"
+      imageDesktop="/img/huawei/Huawei-1.png"
+    )
+      p Developed responsive, multi-language product pages for Huawei’s consumer website, for the launch of flagship devices: the P9 and P9 Plus. Built a component-based template system using Node.js (Express.js) and SCSS, with a Gulp-powered build pipeline for live development, asset optimization, and minified production builds.
+      p.mt-2
+        strong.text-orange-accent-1 Technical Skills:
+      ul.pl-4
+        li Frontend: SCSS, JavaScript, Component-Based Architecture
+        li (Development Environment): Node.js, Express.js
+        li Build & Optimization: Gulp (Live Reload, SCSS Compilation, Minification, Image Optimization)
+        li Localization: Multi-Language Support (page-builder.js)
+    ProjectCard(
+      v-if="category === '' || category === 'Coding'",
+      title="Bonhams"
+      subtitle="Bonhams Auction Platform – Full-Stack Development 2014-2015"
+      category="Coding"
+      logo="/img/logos/Bonhams_Logo.png"
+      imageDesktop="/img/bonhams/bonhams-desktop.jpg"
+      imageMobile="/img/bonhams/bonhams-mobile.jpg"
+    )
+      p Worked on the Bonhams.com auction platform, designing the responsive site based on the existing desktop site. It was a Django and Angular.js-based application supporting sales, auctions, valuations, and payments. The platform used Dockerized microservices, a PostgreSQL database, REST APIs, Redis caching, Celery for background tasks, and Sphinx for search.
+      p.mt-2
+        strong.text-orange-accent-1 Technical Skills:
+      ul.pl-4
+        li Frontend: Angular.js, JavaScript, Responsive Design
+        li Backend: Django (Python), PostgreSQL
+
 
 </template>
 
 <script lang="ts" setup>
-const category = ref("");
+const category = ref("Coding");
 </script>
 
 <style lang="scss"></style>

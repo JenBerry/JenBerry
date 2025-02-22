@@ -2,14 +2,14 @@
   <div>
     v-app.App
       a#home
-      v-app-bar(density="compact")
+      v-app-bar.d-print-none(density="compact")
         v-toolbar-title
           div
             v-img(:src="'/img/jjmb.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
         v-spacer
         v-btn(v-for="item in menu" v-show="mdAndUp" :href="item.link") {{ item.name }}
         v-app-bar-nav-icon(v-show="smAndDown" @click="showMenu = !showMenu")
-      v-navigation-drawer(v-model="showMenu" location="right" temporary)
+      v-navigation-drawer.d-print-none(v-model="showMenu" location="right" temporary)
         v-list
           v-list-item(v-for="item in menu" :href="item.link")
             v-list-item-title {{item.name}}

@@ -4,7 +4,8 @@
       section.mt-16
    
         h1.text-h4.text-md-h2.mb-2.text-center.pt-8 Jennifer J.M. Berry
-        h2.text-h5.text-md-h3.mb-4.text-center.text-orange Senior Freelance Web Developer
+        h2.text-h5.text-md-h3.mb-4.text-center.text-orange Full Stack Web Developer
+        
         v-row.d-md-flex.flex-row-reverse.mt-8
           v-col(cols="12" md="4")
             v-img.rounded-circle.mx-auto(src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
@@ -27,22 +28,28 @@
                 | (Remote & Hybrid ready)
           v-col(cols="12" md="8")
             div.text-center.text-md-left.pr-md-16
-              p {{ description }}
+              p Full-Stack Web Developer with with over a decade of international freelance expertise specialising in JavaScript/TypeScript (Nuxt 3, Vue 3), Python (Flask), and Node.js (Express) as well as pixel perfect responsive HTML and CSS.
+              p.mt-4 As an adaptable, self-sufficient developer with a proven ability to quickly master new technologies and deliver results in dynamic environments, I thrive in fast-paced, high-impact projects—delivering quality code, seamless user experiences, and strong collaboration within agile teams.
+              p.mt-4 Intelligent, quick to learn, and especially adept at bridging technical and creative teams (left-brain / right-brain integration). 
+
             SkillsSection
             div.text-center.text-md-left
               h2.text-orange.mb-4.mt-16 Availability:
-              p Available from 
-                span.text-orange-accent-1 February 10th 2025 
-                | onwards.
-              p.mt-2 Seeking short-term contracts (up to 3 months).
-              p.mt-2 Located near Exeter, UK (Remote & Hybrid ready)
-              p.mt-8.text-uppercase
-                | Note: 
-                span.text-orange-accent-1 Not available for permanent or long-term full-time roles.
+              p.text-uppercase
+                span.text-orange-accent-1 Available Immediately
+              p.mt-2 Seeking
+              ul.ml-8
+                li Short-term / intermittent contracts (up to 3 months).
+                li Or long term part-time remote contracts.
+              p.mt-2 📍 Located near Exeter, UK (Remote & Hybrid ready)
+              p.mt-8
+                span.text-uppercase Note: 
+                span.text-orange-accent-1 Contract only via my Ltd Company - Not open to PAYE or salaried roles.
         
             div.text-center.text-md-left
               h2.text-orange.mb-4.mt-16 Education:
-              v-img.mx-auto.mx-md-0(src="/public/img/logos/Cambridge_Logo.png" alt="University of Cambridge Logo" width="300")
+              v-img.mx-auto.mx-md-0.d-print-none(src="/public/img/logos/Cambridge_Logo.png" alt="University of Cambridge Logo" width="300")
+              p Cambridge University.
               p 2.1 B.A. Hons. Cantab.
               p Natural Sciences 2009
 
@@ -55,37 +62,20 @@
           v-col
             v-card.d-flex.align-center(theme="light" height="100%")
               template(#text)
-                v-img(src="/img/logos/Wolf_and_Badger_Logo.jpg" alt="Wolf & Badger Logo")
-          v-col
-            v-card.d-flex.align-center(theme="light" height="100%")
-              template(#text)
                 v-img(src="/img/logos/Disney_Store_Logo.svg" alt="Disney Store Logo")
           v-col
             v-card.d-flex.align-center(theme="light" height="100%")
               template(#text)
-                v-img(src="/img/logos/Bonhams_Logo.png" alt="Bonhams Logo")
-        v-row(dense)
-          v-col
-            v-card.d-flex.align-center(theme="light" height="100%")
-              template(#text)
                 v-img(src="/img/logos/quru-logo.png" alt="Quru Logo")
-          v-col
+          v-col 
             v-card.d-flex.align-center(theme="light" height="100%")
               template(#text)
-                v-img(src="/img/logos/Flicks_Logo.jpg" alt="Flicks Logo")
-          v-col
-            v-card.d-flex.align-center(theme="light" height="100%")
-              template(#text)
-                v-img(src="/img/logos/Huawei_Logo.png" alt="Huawei Logo")
+                v-img(src="/img/logos/Defected_Logo.png" alt="Access Pay Logo")
         v-row(dense)
           v-col 
             v-card.d-flex.align-center(theme="light" height="100%")
               template(#text)
                 v-img(src="/img/logos/Access_Pay_Logo.jpg" alt="Access Pay Logo")
-          v-col 
-            v-card.d-flex.align-center(theme="light" height="100%")
-              template(#text)
-                v-img(src="/img/logos/Defected_Logo.png" alt="Access Pay Logo")
           v-col 
             v-card.d-flex.align-center(theme="light" height="100%")
               template(#text)
@@ -96,6 +86,7 @@
         p.text-orange Available on request:
         ul.ml-8
           li ISTA
+          li Flicks
           li Agora
           li Blueheart
           li LV=
@@ -117,13 +108,12 @@
             code Travelling 
           v-chip 
             code Forests & Rivers
-          //- v-chip(href="https://joymittens.life" color="orange" append-icon="mdi-launch") JoyMittens.life
 
 
 </template>
 <script setup lang="ts">
 const description =
-  "Experienced Full-Stack Web Developer with expertise in Vue.js (Nuxt 3, Vue 3), Python (Flask), and Node.js (Express), with over a decade of international freelance expertise. Intelligent, quick to learn, and especially adept at bridging technical and graphical teams (left-brain / right-brain integration).";
+  "Experienced Full-Stack Web Developer specializing in Vue/Nuxt, Flask, and Node.js. Building high-performance, scalable web applications with pixel-perfect design and secure architectures. Available for short-term contracts.";
 
 useSeoMeta({
   title: "JJMB - Freelance Web Developer",
@@ -132,5 +122,8 @@ useSeoMeta({
   ogTitle: "JJMB - Freelance Web Developer",
   ogImage: "https://jjmb.dev/img/JJMB_kalisti_sm.jpg",
   ogType: "website",
+  ogUrl: "https://jjmb.dev",
+  ogSiteName: "JJMB - Freelance Web Developer",
+  ogLocale: "en_GB",
 });
 </script>
