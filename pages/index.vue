@@ -15,7 +15,7 @@
                   a.text-orange-accent-1(href="mailto:jenberrymail@gmail.com") jenberrymail@gmail.com
               p
                 span
-                  a.text-orange-accent-1(href="tel:07999298382") 07999 298 382
+                  a.text-orange-accent-1(href="tel:00447999298382") +44 7999 298 382
               p
                 span 
                   a.text-orange-accent-1(href="https://www.linkedin.com/in/jen-berry") LinkedIn
@@ -28,9 +28,11 @@
                 | (Remote & Hybrid ready)
           v-col(cols="12" md="8")
             div.text-center.text-md-left.pr-md-16
-              p Full-Stack Web Developer with with over a decade of international freelance expertise specialising in JavaScript/TypeScript (Nuxt 3, Vue 3), Python (Flask), and Node.js (Express) as well as pixel perfect responsive HTML and CSS.
-              p.mt-4 As an adaptable, self-sufficient developer with a proven ability to quickly master new technologies and deliver results in dynamic environments, I thrive in fast-paced, high-impact projects—delivering quality code, seamless user experiences, and strong collaboration within agile teams.
-              p.mt-4 Intelligent, quick to learn, and especially adept at bridging technical and creative teams (left-brain / right-brain integration). 
+              p.text-h6 I rapidly learn your Web Tech Stack and Visual Brand to deliver intelligent, quality results tailored to you. Whether you need me to lead a greenfield project from start to finish or tackle a legacy codebase — debugging, adjusting, or migrating — I can help.
+
+              p.mt-8 With over 15 years of experience coding websites for a diverse range of companies — including global brands, startups, e-commerce platforms, event organizers, and specialist organizations — my expertise spans cloud-based platforms, content management systems, virtual event platforms, and high-traffic consumer websites.
+    
+              p.mt-4 I am especially adept at bridging technical and creative teams (left-brain / right-brain integration) to produce visually immaculate and pixel perfect results with whichever web framework you choose.
 
             SkillsSection
             div.text-center.text-md-left
@@ -108,6 +110,15 @@
             code Travelling 
           v-chip 
             code Forests & Rivers
+          v-chip 
+            code Off grid communities
+      div.mb-16
+        p Looking for a skilled web developer for your next project? 
+          span.text-orange-accent-1 Let’s chat!
+        p.pb-16 Contact Me: 
+          a.text-orange-accent-1(href="mailto:jenberrymail@gmail.com") jenberrymail@gmail.com 
+          | | 
+          a.text-orange-accent-1(href="tel:00447999298382") +44 7999 298 382
 
 
 </template>

@@ -1,7 +1,21 @@
 <template lang="pug">
   div.text-center.text-md-left.mt-8
     h2.text-orange.mb-4.mt-8 Key Skills:
-    h3
+
+
+    h3.text-orange-accent-1.mt-2 🛠 Full-Stack Development 
+    p From dynamic UIs to scalable backends, I build systems that grow with your business.
+
+    h3.text-orange-accent-1.mt-2 🎨 Pixel-Perfect Frontend 
+    p Expert in responsive, mobile-friendly design, animations, and accessibility best practices.
+
+    h3.text-orange-accent-1.mt-2 ⚡ Performance & Security 
+    p Optimizing SEO, speed, security, and cloud deployment for fast and reliable web apps.
+
+    h3.text-orange-accent-1.mt-2 🤝 Collaboration & Leadership 
+    p Experienced in agile teams, mentoring developers, and bridging technical & creative teams.
+    h2.text-orange.mb-4.mt-8 Tech Stack experience:
+    h3.mt-4
       code Frontend
     div.d-flex.flex-wrap.ga-2.justify-center.justify-md-start.mt-2
       v-chip 
@@ -13,7 +27,11 @@
       v-chip
         code Nuxt3
       v-chip 
-        code SCSS
+        code React
+      v-chip 
+        code Sass/Scss
+      v-chip 
+        code Bootstrap
       v-chip 
         code HTML
       v-chip 
@@ -33,6 +51,8 @@
         code Express
       v-chip 
         code Flask
+      v-chip 
+        code Django
       v-chip
         code SQLAlchemy
       v-chip
@@ -46,6 +66,8 @@
         code RESTful APIs
       v-chip
         code Authentication
+      v-chip
+        code JWT
       v-chip
         code Input Sanitation
       v-chip
@@ -95,6 +117,8 @@
         code Canva
       v-chip 
         code Inkscape
+      v-chip 
+        code Zeplin
 </template>
 
 <script lang="ts" setup></script>

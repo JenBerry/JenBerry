@@ -1,6 +1,6 @@
 <template lang="pug">
   section.mt-16
-    h3.text-h4.mb-8.pt-4.text-center.text-md-left Recent Projects
+    h3.text-h4.mb-8.pt-4.text-center.text-md-left Projects
     div.d-flex.ga-4.flex-column.flex-md-row.align-md-center.d-print-none
       span Filter By:
       div
@@ -259,7 +259,7 @@
       title="Huawei"
       subtitle="Huawei Consumer Website – Front-End Development 2016"
       category="Coding"
-      logo="/img/logos/Huawei-Logo.svg"
+      logo="/img/logos/Huawei-Logo.png"
       imageDesktop="/img/huawei/Huawei-1.png"
     )
       p Developed responsive, multi-language product pages for Huawei’s consumer website, for the launch of flagship devices: the P9 and P9 Plus. Built a component-based template system using Node.js (Express.js) and SCSS, with a Gulp-powered build pipeline for live development, asset optimization, and minified production builds.

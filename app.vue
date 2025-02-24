@@ -26,7 +26,7 @@ const showMenu = ref(false);
 
 const menu = [
   { name: "Home", link: "#home" },
-  { name: "Recent Projects", link: "#projects" },
+  { name: "Projects", link: "#projects" },
   { name: "More Clients", link: "#clients" },
   { name: "Other Interests", link: "#interests" },
 ];
