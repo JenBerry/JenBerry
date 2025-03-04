@@ -164,8 +164,8 @@
       v-if="category === '' || category === 'Coding'",
       title="Flicks"
       subtitle="Movie & Entertainment Platform - 2019-2020"
-      videoDesktop="/img/flicks/flicks-desktop.webm"
-      videoMobile="/img/flicks/flicks-mobile.webm"
+      videoDesktop="/img/Flicks/flicks-desktop.webm"
+      videoMobile="/img/Flicks/flicks-mobile.webm"
       category="Coding"
       logo="/img/logos/Flicks_Logo.jpg"
     )
