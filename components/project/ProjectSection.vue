@@ -7,6 +7,8 @@
         v-btn(variant="tonal" @click="category = category == 'Coding' ? '' : 'Coding'" :active="category == 'Coding'" active-color='orange' block) Coding Projects
       div
         v-btn(variant="tonal" @click="category = category == 'Web Builder' ? '' : 'Web Builder'" :active="category == 'Web Builder'" active-color="orange" block) Web Builder Projects
+      div
+        v-btn(variant="tonal" @click="category = ''" :active="category == ''" active-color="orange" block) Show All
     ProjectCard(
       v-if="category === '' || category === 'Coding'",
       title="International School of Temple Arts"
@@ -61,6 +63,21 @@
           | TipTap (rich text editor), dynamic dashboards, authentication panel
         v-btn.mt-4(href="https://ista.life" target="_blank" rounded="xl" color="orange" variant="flat")  View Live Website
 
+    ProjectCard(
+      v-if="category === '' || category === 'Web Builder'",
+      title="Eros As Medicine"
+      subtitle="Full Web Design and Build in SquareSpace - 2025"
+      videoDesktop="/img/ErosAsMedicine/ErosAsMedicine-desktop.mp4"
+      videoMobile="/img/ErosAsMedicine/ErosAsMedicine-mobile.mp4"
+      category="Web Builder"
+    )
+      ul.pl-4
+        li Full design including colour palette, typography, and layout.
+        li Copy writing.
+        li Created graphics with PhotoShop
+        li Built the website in SquareSpace
+        li Integrated with Mailchimp for email marketing and Google Forms for sign-ups
+        v-btn.mt-4(href="https://erosasmedicine.com" target="_blank" rounded="xl" color="orange" variant="flat")  View Live Website
     ProjectCard(
       v-if="category === '' || category === 'Web Builder'",
       title="Cyrus Wild"
