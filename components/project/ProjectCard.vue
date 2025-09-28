@@ -1,8 +1,20 @@
 <template lang="pug">
   article.mt-8(ref="article")
     v-card(color="surface-variant" theme="light")
-      //- template(#append v-if="category")
-      //-   v-chip(color="orange" class="mx-4 mt-4" dark) {{category}}
+      template(#prepend v-if="category")
+        v-chip(
+          v-if='typeof category == "string"'
+          color="orange"
+          class=" mt-2"
+          dark
+        ) {{ category }}
+        template(v-else)
+          v-chip(
+            v-for='cat in category'
+            color="orange"
+            class=" mt-2"
+            dark
+          ) {{ cat }}
       v-card-text
         div.d-flex.ga-4.mb-6.align-center
           div
@@ -63,7 +75,7 @@ const props = defineProps<{
   subtitle: string;
   imageDesktop?: string;
   imageMobile?: string;
-  category: string;
+  category: string | Array<string>;
   videoDesktop?: string;
   videoMobile?: string;
   animate?: boolean;

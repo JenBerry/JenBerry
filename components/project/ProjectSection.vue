@@ -4,18 +4,18 @@
     div.d-flex.ga-4.flex-column.flex-md-row.align-md-center.d-print-none
       span Filter By:
       div
-        v-btn(variant="tonal" @click="category = category == 'Coding' ? '' : 'Coding'" :active="category == 'Coding'" active-color='orange' block) Coding Projects
+        v-btn(variant="tonal" @click="category == 'Coding' ? setCategory('') : setCategory('Coding')" :active="category == 'Coding'" active-color='orange' block) Coding Projects
       div
-        v-btn(variant="tonal" @click="category = category == 'Web Builder' ? '' : 'Web Builder'" :active="category == 'Web Builder'" active-color="orange" block) Web Builder Projects
+        v-btn(variant="tonal" @click="category == 'Web Builder' ? setCategory('') : setCategory('Web Builder')" :active="category == 'Web Builder'" active-color="orange" block) Web Builder Projects
       div
-        v-btn(variant="tonal" @click="category = ''" :active="category == ''" active-color="orange" block) Show All
+        v-btn(variant="tonal" @click="setCategory('')" :active="category == ''" active-color="orange" block) Show All
     ProjectCard(
       v-if="category === '' || category === 'Coding'",
       title="International School of Temple Arts"
       subtitle="Full Stack Development 2019 - present"
       imageDesktop="/img/ista/home_desktop_1440.webp"
       imageMobile="/img/ista/home_mobile_390.webp"
-      category="Coding"
+      :category="['Coding','Nuxt3.js','Flask.py']"
       :animate="true"
       logo="/img/logos/ISTA_Logo.svg"
     )
@@ -69,7 +69,7 @@
       subtitle="Full Web Design and Build in SquareSpace - 2025"
       videoDesktop="/img/ErosAsMedicine/ErosAsMedicine-desktop.mp4"
       videoMobile="/img/ErosAsMedicine/ErosAsMedicine-mobile.mp4"
-      category="Web Builder"
+      :category="['Web Builder', 'SquareSpace']"
     )
       ul.pl-4
         li Full design including colour palette, typography, and layout.
@@ -84,7 +84,7 @@
       subtitle="Built website in Kajabi - 2024"
       imageDesktop="/img/cyrus/cyrus_home_desktop_1440.webp"
       imageMobile="/img/cyrus/cyrus_home_mobile_390.webp"
-      category="Web Builder"
+      :category="['Web Builder', 'Kajabi']"
       :animate="true"
       logo="/img/logos/Cyrus_Wild_Logo.png"
     )
@@ -105,7 +105,7 @@
       subtitle="Built festival website in Squarespace - 2023"
       videoDesktop="/img/the_field/The_Field_Desktop.webm"
       videoMobile="/img/the_field/The_Field_Mobile.webm"
-      category="Web Builder"
+      :category="['Web Builder','SquareSpace']"
       logo="/img/logos/The_Field_Logo.png"
     )
       ul.pl-4
@@ -119,12 +119,12 @@
           span.text-orange-accent-1 Ticket Tailor 
           | to sell tickets
     ProjectCard(
-      v-if="category === '' || category === 'Web Builder'",
+      v-if="category === '' || category === 'Web Builder' || category == 'Coding'",
       title="Blueheart"
       subtitle="Animated website in Webflow - 2021 & 2022"
       videoDesktop="/img/blueheart/blueheart-desktop.webm"
       videoMobile="/img/blueheart/blueheart-mobile-trim.webm"
-      category="Web Builder"
+      :category="['Coding','Web Builder','Webflow']"
       logo="/img/logos/Blueheart_Logo.png"
     )
       ul.pl-4
@@ -140,7 +140,7 @@
       title="Agora"
       subtitle="Virtual Event Platform (Vue.js & Node.js) - 2021 & 2022"
       videoDesktop="/img/agora/agora_short.mp4"
-      category="Coding"
+      :category="['Coding','Vue.js', 'Node.js']"
       logo="/img/logos/Agora_Logo.png"
     )
       p Developed a 
@@ -183,7 +183,7 @@
       subtitle="Movie & Entertainment Platform - 2019-2020"
       videoDesktop="/img/Flicks/flicks-desktop.webm"
       videoMobile="/img/Flicks/flicks-mobile.webm"
-      category="Coding"
+      :category="['Coding', 'Pug.js','Node.js']"
       logo="/img/logos/Flicks_Logo.jpg"
     )
       p Developed features for Flicks, a multi-region movie platform serving New Zealand, Australia, South Africa, and the UK. Built with Node.js (Express.js) and Pug templating, the platform delivers movie listings, streaming service integrations, and user watchlists. Enhanced user experience with a mobile-first, responsive design.
@@ -203,7 +203,7 @@
       subtitle="React.js frontend & Sitecore CMS - 2018"
       imageDesktop="/img/LV/LV_desktop_original.jpg"
       imageMobile="/img/LV/LV_mobile.jpg"
-      category="Coding"
+      :category="['Coding','React.js']"
       logo="/img/logos/LV_Logo.png"
     )
       ul.pl-4
@@ -223,7 +223,7 @@
       v-if="category === '' || category === 'Coding'",
       title="Wolf & Badger"
       subtitle="E-Commerce Platform Frontend Development 2016 - 2018"
-      category="Coding"
+      :category="['Coding','HTML/CSS/JS', 'Django.py']"
       logo="/img/logos/Wolf_and_Badger_Logo.png"
       videoDesktop="/img/wolf_and_badger/wolf-and-badger-desktop.mp4"
       videoMobile="/img/wolf_and_badger/wolf-and-badger-mobile.webm"
@@ -232,7 +232,7 @@
       p.mt-2
         strong.text-orange-accent-1 Technical Skills:
       ul.pl-4
-        li Frontend: HTML, CSS, JavaScript, jQuery, SCSS, Responsive Design
+        li Frontend: HTML, CSS, JavaScript, jQuery, LESS, Responsive Design, Bootstrap
         li Backend: Django (Python), Mezzanine CMS, PostgreSQL
         li Third-Party Integrations:  Cloudinary
     ProjectCard(
@@ -241,14 +241,14 @@
       subtitle="Responsive Website Development - 2016"
       videoDesktop="/img/bond_and_coyne/bndandcoyne.webm"
       videoMobile="/img/bond_and_coyne/bond-and-coyne-mobile.webm"
-      category="Coding"
+      :category="['Coding']"
       logo="/img/logos/Bond_and_coyne.png"
     )
       p Developed a responsive website for a branding agency using modern frontend and templating technologies.
       ul.pl-4
         li 
           strong.text-orange-accent-1 Frontend: 
-          | Built with Foundation 6 for responsive UI components and grid-based layouts.
+          | Built with Foundation 6 for responsive UI components and grid-based layouts for pixel perfection.
         li 
           strong.text-orange-accent-1 Templating & Backend: 
           | Structured PHP rendering with Twig for modular and maintainable templates.
@@ -291,7 +291,7 @@
       v-if="category === '' || category === 'Coding'",
       title="Bonhams"
       subtitle="Bonhams Auction Platform – Full-Stack Development 2014-2015"
-      category="Coding"
+      :category="['Coding', 'Angular.js', 'Django.py']"
       logo="/img/logos/Bonhams_Logo.png"
       imageDesktop="/img/bonhams/bonhams-desktop.jpg"
       imageMobile="/img/bonhams/bonhams-mobile.jpg"
@@ -300,14 +300,27 @@
       p.mt-2
         strong.text-orange-accent-1 Technical Skills:
       ul.pl-4
-        li Frontend: Angular.js, JavaScript, Responsive Design
+        li Frontend: Angular.js (version 1.2), JavaScript, Responsive Design, Mootools, SASS/SCSS, Compass
         li Backend: Django (Python), PostgreSQL
 
 
 </template>
 
 <script lang="ts" setup>
-const category = ref("Coding");
+const route = useRoute();
+const router = useRouter();
+const categoryQ = ["Coding", "Web Builder"].includes(route.query.cat as string)
+  ? route.query.cat
+  : "";
+const category = ref<"" | "Coding" | "Web Builder">(
+  categoryQ as "" | "Coding" | "Web Builder"
+);
+const setCategory = (cat: "" | "Coding" | "Web Builder") => {
+  if (["Coding", "Web Builder", ""].includes(cat)) {
+    category.value = cat;
+    router.push({ query: { cat: cat } });
+  }
+};
 </script>
 
 <style lang="scss"></style>
