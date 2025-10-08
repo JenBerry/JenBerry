@@ -9,7 +9,6 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "dependencies": {},
   "devDependencies": {
     "@vue/language-plugin-pug": "^2.2.0",
     "@vueuse/nuxt": "^12.4.0",
