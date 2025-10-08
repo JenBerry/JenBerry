@@ -309,18 +309,22 @@
 <script lang="ts" setup>
 const route = useRoute();
 const router = useRouter();
-const categoryQ = ["Coding", "Web Builder"].includes(route.query.cat as string)
-  ? route.query.cat
-  : "";
-const category = ref<"" | "Coding" | "Web Builder">(
-  categoryQ as "" | "Coding" | "Web Builder"
-);
+
+const category = ref<"" | "Coding" | "Web Builder">("");
 const setCategory = (cat: "" | "Coding" | "Web Builder") => {
   if (["Coding", "Web Builder", ""].includes(cat)) {
     category.value = cat;
     router.push({ query: { cat: cat } });
   }
 };
+onMounted(() => {
+  const categoryQ = ["Coding", "Web Builder"].includes(
+    route.query.cat as string
+  )
+    ? (route.query.cat as "Coding" | "Web Builder")
+    : "";
+  setCategory(categoryQ);
+});
 </script>
 
 <style lang="scss"></style>
