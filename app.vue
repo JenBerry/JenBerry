@@ -5,7 +5,8 @@
       v-app-bar.d-print-none(density="compact")
         v-toolbar-title
           div
-            v-img(:src="'/img/jjmb.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
+            v-img(v-if="hdr" :src="'/img/jjmb-hdr.avif'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
+            v-img(v-else :src="'/img/jjmb.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
         v-spacer
         v-btn(v-for="item in menu" v-show="mdAndUp" :href="item.link") {{ item.name }}
         v-app-bar-nav-icon(v-show="smAndDown" @click="showMenu = !showMenu")
@@ -23,6 +24,34 @@ import { useDisplay } from "vuetify";
 import { ref } from "vue";
 const { mdAndUp, smAndDown } = useDisplay();
 const showMenu = ref(false);
+
+const hdr = ref(false);
+let hdrQuery: MediaQueryList;
+
+onMounted(() => {
+  hdrQuery = window.matchMedia("(dynamic-range: high)");
+  hdr.value = hdrQuery.matches;
+  hdrQuery.addEventListener("change", (e) => {
+    console.log("changed");
+    if (e.matches) {
+      hdr.value = true;
+    } else {
+      hdr.value = false;
+    }
+  });
+});
+
+onBeforeUnmount(() => {
+  if (hdrQuery) {
+    hdrQuery.removeEventListener("change", (e) => {
+      if (e.matches) {
+        hdr.value = true;
+      } else {
+        hdr.value = false;
+      }
+    });
+  }
+});
 
 const menu = [
   { name: "Home", link: "#home" },

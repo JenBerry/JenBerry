@@ -8,7 +8,8 @@
         
         v-row.d-md-flex.flex-row-reverse.mt-8
           v-col(cols="12" md="4")
-            v-img.rounded-circle.mx-auto(src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
+            v-img(v-if="hdr").rounded-circle.mx-auto(src="/public/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
+            v-img(v-else).rounded-circle.mx-auto(src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
             div.text-center.mt-8
               p
                 span
@@ -137,4 +138,37 @@ useSeoMeta({
   ogSiteName: "JJMB - Freelance Web Developer",
   ogLocale: "en_GB",
 });
+
+const hdr = ref(false);
+let hdrQuery: MediaQueryList;
+
+onMounted(() => {
+  hdrQuery = window.matchMedia("(dynamic-range: high)");
+  hdr.value = hdrQuery.matches;
+  hdrQuery.addEventListener("change", (e) => {
+    console.log("changed");
+    if (e.matches) {
+      hdr.value = true;
+    } else {
+      hdr.value = false;
+    }
+  });
+});
+
+onBeforeUnmount(() => {
+  if (hdrQuery) {
+    hdrQuery.removeEventListener("change", (e) => {
+      if (e.matches) {
+        hdr.value = true;
+      } else {
+        hdr.value = false;
+      }
+    });
+  }
+});
+
+// const data = useFetch("https://craft.ddev.site/api", {
+//   method: "post",
+//   body: { query: graphqlQuery, vairables: { id: "test_id" } },
+// });
 </script>
