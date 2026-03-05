@@ -22,8 +22,10 @@
           div
             h4.text-h5 {{title}}
             h5.text-h7.text-orange-accent-1.text-body-1 {{subtitle}}
-        div.mb-8.text-body-1.px-4
-          slot
+        div.content.mb-8.text-body-1.px-4
+          div(v-html="formattedContent")
+          v-btn.mt-4(v-if="buttonUrl && buttonText" :href="buttonUrl" target="_blank" rounded="xl" color="orange" variant="flat") {{ buttonText }}
+
         v-row.d-print-none(align="center" justify="center")
           v-col(cols="12" md="9")
             div
@@ -70,6 +72,7 @@
               )
 </template>
 <script setup lang="ts">
+import { marked } from "marked";
 const props = defineProps<{
   title: string;
   subtitle: string;
@@ -80,11 +83,29 @@ const props = defineProps<{
   videoMobile?: string;
   animate?: boolean;
   logo?: string;
+  buttonUrl?: string;
+  buttonText?: string;
+  content?: string;
 }>();
 const article = ref(null);
 const targetIsVisible = useElementVisibility(article);
+const formattedContent = computed(() => marked(props.content || ""));
 </script>
 <style lang="scss" scoped>
+.content {
+  :deep(em) {
+    color: #ffd180;
+    font-style: normal;
+  }
+  :deep(ul) {
+    margin-left: 16px;
+    margin-bottom: 8px;
+  }
+  :deep(p) {
+    margin-bottom: 8px;
+  }
+}
+
 .screenshot-thumbnail :deep(img) {
   transition: object-position 40s;
   transition-timing-function: linear;
