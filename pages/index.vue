@@ -8,8 +8,8 @@
         
         v-row.d-md-flex.flex-row-reverse.mt-8
           v-col(cols="12" md="4")
-            v-img(v-if="hdr").rounded-circle.mx-auto(src="/public/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
-            v-img(v-else).rounded-circle.mx-auto(src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
+            v-img.rounded-circle.mx-auto(v-if="hdr" src="/public/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
+            v-img.rounded-circle.mx-auto(v-else src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
             div.text-center.mt-8
               p
                 span
