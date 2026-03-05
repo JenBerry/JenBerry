@@ -28,28 +28,19 @@ const showMenu = ref(false);
 const hdr = ref(false);
 let hdrQuery: MediaQueryList;
 
+const handleHdrChange = (e: MediaQueryListEvent) => {
+  hdr.value = e.matches;
+};
+
 onMounted(() => {
   hdrQuery = window.matchMedia("(dynamic-range: high)");
   hdr.value = hdrQuery.matches;
-  hdrQuery.addEventListener("change", (e) => {
-    console.log("changed");
-    if (e.matches) {
-      hdr.value = true;
-    } else {
-      hdr.value = false;
-    }
-  });
+  hdrQuery.addEventListener("change", handleHdrChange);
 });
 
 onBeforeUnmount(() => {
   if (hdrQuery) {
-    hdrQuery.removeEventListener("change", (e) => {
-      if (e.matches) {
-        hdr.value = true;
-      } else {
-        hdr.value = false;
-      }
-    });
+    hdrQuery.removeEventListener("change", handleHdrChange);
   }
 });
 
