@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.text-center.text-md-left.mt-8
+  div.text-center.text-md-left.mt-16
     h2.text-orange.mb-4.mt-8 Key Skills:
 
 
@@ -14,7 +14,7 @@
 
     h3.text-orange-accent-1.mt-2 🤝 Collaboration & Leadership 
     p Experienced in agile teams, mentoring developers, and bridging technical & creative teams.
-    h2.text-orange.mb-4.mt-8 Tech Stack experience:
+    h2.text-orange.mb-4.mt-16 Tech Stack experience:
     h3.mt-4
       code Frontend
     div.d-flex.flex-wrap.ga-2.justify-center.justify-md-start.mt-2

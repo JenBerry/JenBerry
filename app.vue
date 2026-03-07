@@ -9,6 +9,13 @@
             v-img(v-else :src="'/img/jjmb.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
         v-spacer
         v-btn(v-for="item in menu" v-show="mdAndUp" :href="item.link") {{ item.name }}
+        v-row.flex-grow-0.h-100.mx-4
+          v-col.h-100.pa-3
+            a.h-100(href="https://www.linkedin.com/in/jen-berry")
+                img.h-100(src="/public/img/skills/linkedin.svg")
+          v-col.h-100.pa-3
+            a.h-100(href="https://github.com/jenberry")
+                img.h-100(src="/public/img/skills/github.svg")
         v-app-bar-nav-icon(v-show="smAndDown" @click="showMenu = !showMenu")
       v-navigation-drawer.d-print-none(v-model="showMenu" location="right" temporary)
         v-list

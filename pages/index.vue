@@ -1,60 +1,85 @@
 <template lang="pug">
   v-sheet
     v-container
-      section.mt-16
+      section.d-flex.flex-column.justify-center.align-center(style="min-height:100vh")
+  
+        div
    
-        h1.text-h4.text-md-h2.mb-2.text-center.pt-8 Jennifer J.M. Berry
-        h2.text-h5.text-md-h3.mb-4.text-center.text-orange Full Stack Web Developer
-        
-        v-row.d-md-flex.flex-row-reverse.mt-8
-          v-col(cols="12" md="4")
-            v-img.rounded-circle.mx-auto(v-if="hdr" src="/public/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
-            v-img.rounded-circle.mx-auto(v-else src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
-            div.text-center.mt-8
-              p
-                span
-                  a.text-orange-accent-1(href="mailto:jenberrymail@gmail.com") jenberrymail@gmail.com
-              p
-                span
-                  a.text-orange-accent-1(href="tel:00447999298382") +44 7999 298 382
-              p
-                span 
-                  a.text-orange-accent-1(href="https://www.linkedin.com/in/jen-berry") LinkedIn
-                span  | 
-                span 
-                  a.text-orange-accent-1(href="https://github.com/jenberry") Github
-              p
-                span Located near Exeter, UK
-                br
-                | (Remote & Hybrid ready)
-          v-col(cols="12" md="8")
-            div.text-center.text-md-left.pr-md-16
-              p.text-h6 I rapidly learn your Web Tech Stack and Visual Brand to deliver intelligent, quality results tailored to you. Whether you need me to lead a greenfield project from start to finish or tackle a legacy codebase — debugging, adjusting, or migrating — I can help.
+          h1.text-h4.text-md-h2.mb-2.text-center.pt-16 Jen Berry
+          h2.text-h5.text-md-h3.mb-4.text-center.text-orange Web Development
 
-              p.mt-8 With over 15 years of experience coding websites for a diverse range of companies — including global brands, startups, e-commerce platforms, event organizers, and specialist organizations — my expertise spans cloud-based platforms, content management systems, virtual event platforms, and high-traffic consumer websites.
-    
-              p.mt-4 I am especially adept at bridging technical and creative teams (left-brain / right-brain integration) to produce visually immaculate and pixel perfect results with whichever web framework you choose.
+        div
+          v-img.rounded-circle.mx-auto(v-if="hdr" src="/public/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
+          v-img.rounded-circle.mx-auto(v-else src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
 
-            SkillsSection
-            div.text-center.text-md-left
-              h2.text-orange.mb-4.mt-16 Availability:
-              p.text-uppercase
-                span.text-orange-accent-1 Available Immediately
-              p.mt-2 Seeking
-              ul.ml-8
-                li Short-term / intermittent contracts (up to 3 months).
-                li Or long term part-time remote contracts.
-              p.mt-2 📍 Located near Exeter, UK (Remote & Hybrid ready)
-              p.mt-8
-                span.text-uppercase Note: 
-                span.text-orange-accent-1 Contract only via my Ltd Company - Not open to PAYE or salaried roles.
+        div.text-center.w-lg-66.mx-auto
+          p.text-h5.text-md-h4.pt-8.pb-8 Building Modern Reactive Web Applications.
+
+        div.text-center.w-75.w-md-100.pb-8
+          v-row.d-flex.justify-center.flex-wrap
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/vue.svg")
+              span.text-body-2 Vue.js
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/nuxt.svg")
+              span.text-body-2 Nuxt.js
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/typescript.svg")
+              span.text-body-2 Type Script
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/gsap.svg")
+              span.text-body-2 GSAP.js
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/sass.svg")
+              span.text-body-2 Sass
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/python.svg")
+              span.text-body-2 Python
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/flask.png")
+              span.text-body-2 Flask
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/postgres.svg")
+              span.text-body-2 Postgres
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/gcp.svg")
+              span.text-body-2 GCP
+            v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
+              v-img.w-75.mb-3(src="/public/img/skills/docker.svg")
+              span.text-body-2 Docker
+
+
+
+        div.text-center.mt-8
+            p.d-flex.flex-column.flex-md-row.ga-md-4.justify-center.align-center
+              span
+                a.text-orange-accent-1(href="mailto:jenberrymail@gmail.com") jenberrymail@gmail.com
+
+              span.d-none.d-md-inline | 
+
+            
+              span
+                a.text-orange-accent-1(href="tel:00447999298382") +44 7999 298 382
+
+            p.d-flex.flex-column.flex-md-row.ga-md-4
+              span Located near Exeter, UK 
+          
+              span (Remote & Hybrid ready)
         
-            div.text-center.text-md-left
-              h2.text-orange.mb-4.mt-16 Education:
-              v-img.mx-auto.mx-md-0.d-print-none(src="/public/img/logos/Cambridge_Logo.png" alt="University of Cambridge Logo" width="300")
-              p Cambridge University.
-              p 2.1 B.A. Hons. Cantab.
-              p Natural Sciences 2009
+      section
+        div.text-center.text-md-left.mt-16
+          h2.text-orange.mb-4.mt-16 Experience:
+          p.text-h4 15+ years
+        div.text-center.text-md-left
+          h2.text-orange.mb-4.mt-16 Education:
+          v-img.mx-auto.mx-md-0.d-print-none(src="/public/img/logos/Cambridge_Logo.png" alt="University of Cambridge Logo" width="300")
+          p Cambridge University.
+          p 2.1 B.A. Hons. Cantab. - Natural Sciences 2009
+
+        SkillsSection
+
+        
+
 
       a#projects
       ProjectSection
