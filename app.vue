@@ -12,10 +12,10 @@
         v-row.flex-grow-0.h-100.mx-4
           v-col.h-100.pa-3
             a.h-100(href="https://www.linkedin.com/in/jen-berry" target="_blank" rel="noopener noreferrer")
-                img.h-100(src="/public/img/skills/linkedin.svg" alt="LinkedIn")
+                img(src="/public/img/skills/linkedin.svg" alt="LinkedIn" width="24px" height="24px" )
           v-col.h-100.pa-3
             a.h-100(href="https://github.com/jenberry" target="_blank" rel="noopener noreferrer")
-                img.h-100(src="/public/img/skills/github.svg" alt="GitHub")
+                img(src="/public/img/skills/github.svg" alt="GitHub" width="24px" height="24px")
         v-app-bar-nav-icon(v-show="smAndDown" @click="showMenu = !showMenu")
       v-navigation-drawer.d-print-none(v-model="showMenu" location="right" temporary)
         v-list
