@@ -11,11 +11,11 @@
         v-btn(v-for="item in menu" v-show="mdAndUp" :href="item.link") {{ item.name }}
         v-row.flex-grow-0.h-100.mx-4
           v-col.h-100.pa-3
-            a.h-100(href="https://www.linkedin.com/in/jen-berry")
-                img.h-100(src="/public/img/skills/linkedin.svg")
+            a.h-100(href="https://www.linkedin.com/in/jen-berry" target="_blank" rel="noopener noreferrer")
+                img.h-100(src="/public/img/skills/linkedin.svg" alt="LinkedIn")
           v-col.h-100.pa-3
-            a.h-100(href="https://github.com/jenberry")
-                img.h-100(src="/public/img/skills/github.svg")
+            a.h-100(href="https://github.com/jenberry" target="_blank" rel="noopener noreferrer")
+                img.h-100(src="/public/img/skills/github.svg" alt="GitHub")
         v-app-bar-nav-icon(v-show="smAndDown" @click="showMenu = !showMenu")
       v-navigation-drawer.d-print-none(v-model="showMenu" location="right" temporary)
         v-list
