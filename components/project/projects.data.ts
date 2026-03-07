@@ -19,7 +19,7 @@ export const projects: Project[] = [
     id: "insite",
     title: "InSite",
     subtitle: "Nuxt 4 App with advanced animations and Craft CMS",
-    category: ["Coding", "Nuxt4.js", "GSAP", "CraftCMS"],
+    category: ["Nuxt4.js", "GSAP", "CraftCMS"],
     buttonUrl: "https://insiteinternational.com",
     buttonText: "View Live Website",
     logo: "/img/logos/insite.svg",
@@ -43,7 +43,7 @@ The project emphasised animation as a core UX layer, alongside scalable componen
     subtitle: "Full Stack Development 2019 - present",
     imageDesktop: "/img/ista/home_desktop_1440.webp",
     imageMobile: "/img/ista/home_mobile_390.webp",
-    category: ["Coding", "Nuxt3.js", "Flask.py"],
+    category: ["Nuxt3.js", "Flask.py"],
     animate: true,
     logo: "/img/logos/ISTA_Logo.svg",
     buttonUrl: "https://ista.life",
@@ -70,59 +70,59 @@ This project showcases my expertise in full-stack development, API design, secur
 *   **Content Management & UI Components:** TipTap (rich text editor), dynamic dashboards, authentication panel
 `,
   },
-  {
-    id: "eros",
-    title: "Eros As Medicine",
-    subtitle: "Full Web Design and Build in SquareSpace - 2025",
-    videoDesktop: "/img/ErosAsMedicine/ErosAsMedicine-desktop.mp4",
-    videoMobile: "/img/ErosAsMedicine/ErosAsMedicine-mobile.mp4",
-    category: ["Web Builder", "SquareSpace"],
-    buttonUrl: "https://erosasmedicine.com",
-    buttonText: "View Live Website",
-    content: `
-*   Full design including colour palette, typography, and layout.
-*   Copy writing.
-*   Created graphics with PhotoShop
-*   Built the website in SquareSpace
-*   Integrated with Mailchimp for email marketing and Google Forms for sign-ups`,
-  },
-  {
-    id: "cyrus",
-    title: "Cyrus Wild",
-    subtitle: "Built website in Kajabi - 2024",
-    imageDesktop: "/img/cyrus/cyrus_home_desktop_1440.webp",
-    imageMobile: "/img/cyrus/cyrus_home_mobile_390.webp",
-    category: ["Web Builder", "Kajabi"],
-    animate: true,
-    logo: "/img/logos/Cyrus_Wild_Logo.png",
-    buttonUrl: "https://cyruswild.com",
-    buttonText: "View Live Website",
-    content: `
-*   Designed and developed a mobile-friendly website using *Kajabi*.
-*   Collaborating with a designer and brand manager to meet aesthetic and functional requirements.
-*   Creating personality quiz with *Typeform* and automating results with *Zapier*.
-`,
-  },
-  {
-    id: "the-field",
-    title: "The Field",
-    subtitle: "Built festival website in Squarespace - 2023",
-    videoDesktop: "/img/the_field/The_Field_Desktop.webm",
-    videoMobile: "/img/the_field/The_Field_Mobile.webm",
-    category: ["Web Builder", "SquareSpace"],
-    logo: "/img/logos/The_Field_Logo.png",
-    content: `
-*   Designed and developed a mobile-friendly website using *Squarespace*.
-*   Designed web graphics in *Photoshop* to display festival facilitators
-*   integrated with *Ticket Tailor* to sell tickets`,
-  },
+  //   {
+  //     id: "eros",
+  //     title: "Eros As Medicine",
+  //     subtitle: "Full Web Design and Build in SquareSpace - 2025",
+  //     videoDesktop: "/img/ErosAsMedicine/ErosAsMedicine-desktop.mp4",
+  //     videoMobile: "/img/ErosAsMedicine/ErosAsMedicine-mobile.mp4",
+  //     category: ["Web Builder", "SquareSpace"],
+  //     buttonUrl: "https://erosasmedicine.com",
+  //     buttonText: "View Live Website",
+  //     content: `
+  // *   Full design including colour palette, typography, and layout.
+  // *   Copy writing.
+  // *   Created graphics with PhotoShop
+  // *   Built the website in SquareSpace
+  // *   Integrated with Mailchimp for email marketing and Google Forms for sign-ups`,
+  //   },
+  //   {
+  //     id: "cyrus",
+  //     title: "Cyrus Wild",
+  //     subtitle: "Built website in Kajabi - 2024",
+  //     imageDesktop: "/img/cyrus/cyrus_home_desktop_1440.webp",
+  //     imageMobile: "/img/cyrus/cyrus_home_mobile_390.webp",
+  //     category: ["Web Builder", "Kajabi"],
+  //     animate: true,
+  //     logo: "/img/logos/Cyrus_Wild_Logo.png",
+  //     buttonUrl: "https://cyruswild.com",
+  //     buttonText: "View Live Website",
+  //     content: `
+  // *   Designed and developed a mobile-friendly website using *Kajabi*.
+  // *   Collaborating with a designer and brand manager to meet aesthetic and functional requirements.
+  // *   Creating personality quiz with *Typeform* and automating results with *Zapier*.
+  // `,
+  //   },
+  //   {
+  //     id: "the-field",
+  //     title: "The Field",
+  //     subtitle: "Built festival website in Squarespace - 2023",
+  //     videoDesktop: "/img/the_field/The_Field_Desktop.webm",
+  //     videoMobile: "/img/the_field/The_Field_Mobile.webm",
+  //     category: ["Web Builder", "SquareSpace"],
+  //     logo: "/img/logos/The_Field_Logo.png",
+  //     content: `
+  // *   Designed and developed a mobile-friendly website using *Squarespace*.
+  // *   Designed web graphics in *Photoshop* to display festival facilitators
+  // *   integrated with *Ticket Tailor* to sell tickets`,
+  //   },
   {
     id: "blueheart",
     title: "Blueheart",
     subtitle: "Animated website in Webflow - 2021 & 2022",
     videoDesktop: "/img/blueheart/blueheart-desktop.webm",
     videoMobile: "/img/blueheart/blueheart-mobile-trim.webm",
-    category: ["Coding", "Web Builder", "Webflow"],
+    category: ["Web Builder", "Webflow"],
     logo: "/img/logos/Blueheart_Logo.png",
     buttonUrl: "https://blueheart.io",
     buttonText: "View Live Website",
@@ -135,7 +135,7 @@ This project showcases my expertise in full-stack development, API design, secur
     title: "Agora",
     subtitle: "Virtual Event Platform (Vue.js & Node.js) - 2021 & 2022",
     videoDesktop: "/img/agora/agora_short.mp4",
-    category: ["Coding", "Vue.js", "Node.js"],
+    category: ["Vue.js", "Node.js"],
     logo: "/img/logos/Agora_Logo.png",
     buttonUrl: "https://hello.atypiclabs.com/",
     buttonText: "View Live Website",
@@ -163,7 +163,7 @@ This project demonstrates my ability to build interactive real-time applications
     subtitle: "Movie & Entertainment Platform - 2019-2020",
     videoDesktop: "/img/Flicks/flicks-desktop.webm",
     videoMobile: "/img/Flicks/flicks-mobile.webm",
-    category: ["Coding", "Pug.js", "Node.js"],
+    category: ["Pug.js", "Node.js"],
     logo: "/img/logos/Flicks_Logo.jpg",
     content: `
 Developed features for Flicks, a multi-region movie platform serving New Zealand, Australia, South Africa, and the UK. Built with Node.js (Express.js) and Pug templating, the platform delivers movie listings, streaming service integrations, and user watchlists. Enhanced user experience with a mobile-first, responsive design.
@@ -182,7 +182,7 @@ Developed features for Flicks, a multi-region movie platform serving New Zealand
     subtitle: "React.js frontend & Sitecore CMS - 2018",
     imageDesktop: "/img/LV/LV_desktop_original.jpg",
     imageMobile: "/img/LV/LV_mobile.jpg",
-    category: ["Coding", "React.js"],
+    category: ["React.js"],
     logo: "/img/logos/LV_Logo.png",
     buttonUrl: "https://www.lv.com",
     buttonText: "View Live Website",
@@ -197,7 +197,7 @@ Developed features for Flicks, a multi-region movie platform serving New Zealand
     subtitle: "E-Commerce Platform Frontend Development 2016 - 2018",
     videoDesktop: "/img/wolf_and_badger/wolf-and-badger-desktop.mp4",
     videoMobile: "/img/wolf_and_badger/wolf-and-badger-mobile.webm",
-    category: ["Coding", "HTML/CSS/JS", "Django.py"],
+    category: ["HTML/CSS/JS", "Django.py"],
     logo: "/img/logos/Wolf_and_Badger_Logo.png",
     content: `
 Worked on Wolf & Badger's e-commerce platform, a Django-based marketplace for designer products. Built with Mezzanine CMS, the platform supported multi-currency transactions, international shipping, and custom dashboards for designers and store management. Contributed to frontend development, ensuring a responsive, visually polished user experience.
@@ -214,7 +214,7 @@ Worked on Wolf & Badger's e-commerce platform, a Django-based marketplace for de
     subtitle: "Responsive Website Development - 2016",
     videoDesktop: "/img/bond_and_coyne/bndandcoyne.webm",
     videoMobile: "/img/bond_and_coyne/bond-and-coyne-mobile.webm",
-    category: ["Coding"],
+    category: [],
     logo: "/img/logos/Bond_and_coyne.png",
     buttonUrl: "https://github.com/JenBerry/bondandcoynewebsite",
     buttonText: "View Code on Github",
@@ -242,7 +242,7 @@ This project showcases my ability to build responsive, modular, and scalable fro
     title: "Huawei",
     subtitle: "Huawei Consumer Website – Front-End Development 2016",
     imageDesktop: "/img/huawei/Huawei-1.png",
-    category: ["Coding"],
+    category: [],
     logo: "/img/logos/Huawei-Logo.png",
     content: `
 Developed responsive, multi-language product pages for Huawei's consumer website, for the launch of flagship devices: the P9 and P9 Plus. Built a component-based template system using Node.js (Express.js) and SCSS, with a Gulp-powered build pipeline for live development, asset optimization, and minified production builds.
@@ -260,7 +260,7 @@ Developed responsive, multi-language product pages for Huawei's consumer website
     subtitle: "Bonhams Auction Platform – Full-Stack Development 2014-2015",
     imageDesktop: "/img/bonhams/bonhams-desktop.jpg",
     imageMobile: "/img/bonhams/bonhams-mobile.jpg",
-    category: ["Coding", "Angular.js", "Django.py"],
+    category: ["Angular.js", "Django.py"],
     logo: "/img/logos/Bonhams_Logo.png",
     content: `
 Worked on the Bonhams.com auction platform, designing the responsive site based on the existing desktop site. It was a Django and Angular.js-based application supporting sales, auctions, valuations, and payments. The platform used Dockerized microservices, a PostgreSQL database, REST APIs, Redis caching, Celery for background tasks, and Sphinx for search.
