@@ -157,7 +157,7 @@ useSeoMeta({
   description: description,
   ogDescription: description,
   ogTitle: "JJMB - Freelance Web Developer",
-  ogImage: "https://jjmb.dev/img/JJMB_kalisti_sm.jpg",
+  ogImage: "https://jjmb.dev/img/jen-berry-web-developer.jpg",
   ogType: "website",
   ogUrl: "https://jjmb.dev",
   ogSiteName: "JJMB - Freelance Web Developer",
