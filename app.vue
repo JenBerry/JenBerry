@@ -5,17 +5,20 @@
       v-app-bar.d-print-none(density="compact")
         v-toolbar-title
           div
-            v-img(v-if="hdr" :src="'/img/jjmb-hdr.avif'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
-            v-img(v-else :src="'/img/jjmb.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
+            v-img(v-if="hdr" :src="'/img/jjmb-hdr-sm.avif'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
+            v-img(v-else :src="'/img/jjmb-sm.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
         v-spacer
         v-btn(v-for="item in menu" v-show="mdAndUp" :href="item.link") {{ item.name }}
-        v-row.flex-grow-0.h-100.mx-4
+        v-row.flex-grow-0.h-100.mx-4.contact-icons
           v-col.h-100.pa-3
             a.h-100(href="https://www.linkedin.com/in/jen-berry" target="_blank" rel="noopener noreferrer")
-                img(src="/public/img/skills/linkedin.svg" alt="LinkedIn" width="24px" height="24px" )
+                img(src="/img/linkedin.svg" alt="LinkedIn" width="24px" height="24px" )
           v-col.h-100.pa-3
             a.h-100(href="https://github.com/jenberry" target="_blank" rel="noopener noreferrer")
-                img(src="/public/img/skills/github.svg" alt="GitHub" width="24px" height="24px")
+                img(src="/img/github.svg" alt="GitHub" width="24px" height="24px")
+          v-col.h-100.pa-3
+            a.h-100(href="https://wa.me/447999298382" target="_blank" rel="noopener noreferrer")
+                img(src="/img/whatsapp.svg" alt="WhatsApp" width="24px" height="24px")
         v-app-bar-nav-icon(v-show="smAndDown" @click="showMenu = !showMenu")
       v-navigation-drawer.d-print-none(v-model="showMenu" location="right" temporary)
         v-list
@@ -89,4 +92,15 @@ useSchemaOrg([
 ]);
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contact-icons {
+  a img {
+    transition: filter 0.1s;
+  }
+  a:hover {
+    img {
+      filter: drop-shadow(0px 0px 5px rgb(255, 209, 128));
+    }
+  }
+}
+</style>
