@@ -5,9 +5,8 @@ div.profile-image
     defs
       mask#spiral-mask
         rect(width="1200" height="1200" fill="black")
-        g
+        g(ref="spiralGroup")
           path(:d="spiralPath" fill="none" stroke="white" stroke-width="25" stroke-linecap="round")
-          animateTransform(attributeName="transform" type="rotate" from="0 600 600" to="-360 600 600" dur="10s" repeatCount="indefinite")
     image(href="/img/portfolio_radial_bg.svg" width="1200" height="1200" mask="url(#spiral-mask)")
     image(href="/img/portfolio_radial_bg.svg" width="1200" height="1200" mask="url(#spiral-mask)" transform="rotate(-1 600 600)")
   v-img.rounded-circle.mx-auto.profile-image-img(v-if="hdr" src="/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
@@ -15,6 +14,10 @@ div.profile-image
 </template>
 
 <script setup lang="ts">
+const gsap = useGSAP();
+
+const spiralGroup = ref<SVGGElement | null>(null);
+
 function generateSpiralPath(): string {
   const cx = 600,
     cy = 600;
@@ -48,6 +51,29 @@ onMounted(() => {
   hdrQuery = window.matchMedia("(dynamic-range: high)");
   hdr.value = hdrQuery.matches;
   hdrQuery.addEventListener("change", handleHdrChange);
+
+  if (spiralGroup.value) {
+    const introRotation = -150;
+    gsap.to(spiralGroup.value, {
+      rotation: introRotation,
+      svgOrigin: "600 600",
+      duration: 1,
+      ease: "power2.out",
+      onComplete: () => {
+        gsap.to(spiralGroup.value, {
+          rotation: introRotation - 8000,
+          svgOrigin: "600 600",
+          ease: "none",
+          scrollTrigger: {
+            trigger: document.documentElement,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+          },
+        });
+      },
+    });
+  }
 });
 
 onBeforeUnmount(() => {
