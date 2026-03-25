@@ -149,21 +149,6 @@
 
 </template>
 <script setup lang="ts">
-const description =
-  "Experienced Full-Stack Web Developer specializing in Vue/Nuxt, Flask, and Node.js. Building high-performance, scalable web applications with pixel-perfect design and secure architectures. Available for short-term contracts.";
-
-useSeoMeta({
-  title: "JJMB - Freelance Web Developer",
-  description: description,
-  ogDescription: description,
-  ogTitle: "JJMB - Freelance Web Developer",
-  ogImage: "https://jjmb.dev/img/jen-berry-web-developer.jpg",
-  ogType: "website",
-  ogUrl: "https://jjmb.dev",
-  ogSiteName: "JJMB - Freelance Web Developer",
-  ogLocale: "en_GB",
-});
-
 const hdr = ref(false);
 let hdrQuery: MediaQueryList;
 

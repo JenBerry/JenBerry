@@ -57,6 +57,36 @@ const menu = [
   { name: "More Clients", link: "#clients" },
   { name: "Other Interests", link: "#interests" },
 ];
+
+const description =
+  "Experienced Full-Stack Web Developer specializing in Vue/Nuxt, Flask, and Node.js. Building high-performance, scalable web applications with pixel-perfect design and secure architectures. Available for short-term contracts.";
+
+useSeoMeta({
+  title: "JJMB - Freelance Web Developer",
+  description: description,
+  ogDescription: description,
+  ogTitle: "JJMB - Freelance Web Developer",
+  ogImage: "https://jjmb.dev/img/jen-berry-web-developer.jpg",
+  ogType: "website",
+  ogUrl: "https://jjmb.dev",
+  ogSiteName: "JJMB - Freelance Web Developer",
+  ogLocale: "en_GB",
+});
+
+useSchemaOrg([
+  definePerson({
+    name: "Jen Berry",
+    jobTitle: "Freelance Web Developer",
+    email: "jenberrymail@gmail.com",
+    description: description,
+    url: "https://jjmb.dev",
+    image: "https://jjmb.dev/img/JJMB_kalisti_sm.jpg",
+    sameAs: [
+      "https://github.com/jenberry",
+      "https://linkedin.com/in/jen-berry",
+    ],
+  }),
+]);
 </script>
 
 <style lang="scss" scoped></style>
