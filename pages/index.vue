@@ -1,14 +1,14 @@
 <template lang="pug">
-  v-sheet
+  v-sheet(style="overflow: hidden;")
     v-container
-      section.d-flex.flex-column.justify-center.align-center(style="min-height:100vh")
+      section.d-flex.flex-column.justify-center.align-center(ref="heroSection" style="min-height:100vh")
   
         div(style="z-index:2")
    
           h1.text-h4.text-md-h2.mb-2.text-center.pt-16 Jen Berry
           h2.text-h5.text-md-h3.mb-4.text-center.text-orange Web Development
 
-        ProfileImage
+        ProfileImage(:wrapper="heroSection")
 
 
         div.text-center.w-lg-66.mx-auto(style="z-index: 2;")
@@ -151,6 +151,7 @@
 
 </template>
 <script setup lang="ts">
+const heroSection = ref<HTMLElement | null>(null);
 // const data = useFetch("https://craft.ddev.site/api", {
 //   method: "post",
 //   body: { query: graphqlQuery, vairables: { id: "test_id" } },

@@ -14,7 +14,12 @@ div.profile-image
 </template>
 
 <script setup lang="ts">
+const props = defineProps<{
+  wrapper: HTMLElement | null;
+}>();
+
 const gsap = useGSAP();
+let ctx: gsap.Context | null = null;
 
 const spiralGroup = ref<SVGGElement | null>(null);
 
@@ -47,38 +52,53 @@ const handleHdrChange = (e: MediaQueryListEvent) => {
   hdr.value = e.matches;
 };
 
-onMounted(() => {
-  hdrQuery = window.matchMedia("(dynamic-range: high)");
-  hdr.value = hdrQuery.matches;
-  hdrQuery.addEventListener("change", handleHdrChange);
-
-  if (spiralGroup.value) {
+const setUpAnimation = (spiralGroup: SVGGElement, wrapper: HTMLElement) => {
+  ctx = gsap.context(() => {
     const introRotation = -150;
-    gsap.to(spiralGroup.value, {
+    gsap.to(spiralGroup, {
       rotation: introRotation,
       svgOrigin: "600 600",
-      duration: 1,
+      duration: 1.5,
       ease: "power2.out",
       onComplete: () => {
-        gsap.to(spiralGroup.value, {
-          rotation: introRotation - 8000,
+        gsap.to(spiralGroup, {
+          rotation: introRotation - 500,
           svgOrigin: "600 600",
           ease: "none",
           scrollTrigger: {
-            trigger: document.documentElement,
+            trigger: wrapper,
             start: "top top",
-            end: "bottom bottom",
+            end: "bottom top",
             scrub: true,
           },
         });
       },
     });
-  }
+  });
+};
+
+watch(
+  () => props.wrapper,
+  (newWrapper) => {
+    if (spiralGroup.value && newWrapper) {
+      setUpAnimation(spiralGroup.value, newWrapper);
+    }
+  },
+  { immediate: true },
+);
+
+onMounted(() => {
+  hdrQuery = window.matchMedia("(dynamic-range: high)");
+  hdr.value = hdrQuery.matches;
+  hdrQuery.addEventListener("change", handleHdrChange);
 });
 
 onBeforeUnmount(() => {
   if (hdrQuery) {
     hdrQuery.removeEventListener("change", handleHdrChange);
+  }
+  if (ctx) {
+    ctx.revert();
   }
 });
 </script>
