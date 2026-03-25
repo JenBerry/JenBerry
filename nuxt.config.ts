@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
     "nuxt-umami",
     "vuetify-nuxt-module",
+    "v-gsap-nuxt",
   ],
   css: ["~/assets/styles/global.scss"],
   umami: {

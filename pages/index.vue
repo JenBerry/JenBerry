@@ -15,7 +15,7 @@
           p.text-h5.text-md-h4.pt-8.pb-8 Building Modern Reactive Web Applications.
 
         div.text-center.w-75.w-md-100.pb-8(style="z-index: 2;")
-          v-row.d-flex.justify-center.flex-wrap
+          v-row.d-flex.justify-center.flex-wrap(v-gsap.whenVisible.stagger.once.from='{ opacity: 0, y: 50, stagger: 0.08 }')
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
               v-img.w-75.mb-3(src="/img/skills/vue.svg")
               span.text-body-2 Vue.js
@@ -65,25 +65,28 @@
           
               span (Remote & Hybrid ready)
         
-      section
+      section(v-gsap.whenVisible.from='{ autoAlpha: 0, y: 50 }')
         div.text-center.text-md-left.mt-16
           h2.text-orange.mb-4.mt-16 Experience:
           p.text-h4 15+ years
+      section(v-gsap.whenVisible.from='{ autoAlpha: 0, y: 50 }')
         div.text-center.text-md-left
           h2.text-orange.mb-4.mt-16 Education:
           v-img.mx-auto.mx-md-0.d-print-none(src="/img/logos/Cambridge_Logo.png" alt="University of Cambridge Logo" width="300")
           p Cambridge University.
           p 2.1 B.A. Hons. Cantab. - Natural Sciences 2009
-
+      section(v-gsap.whenVisible.from='{ autoAlpha: 0, y: 50 }')
         SkillsSection
+      section(v-gsap.whenVisible.from='{ autoAlpha: 0, y: 50 }')
+        SkillsStackSection
 
         
 
-
       a#projects
+
       ProjectSection
       a#clients
-      section.mt-16
+      section.mt-16(v-gsap.whenVisible.from='{ autoAlpha: 0, y: 50 }')
         h3.text-h4.mb-4 More clients
         v-row(dense)
           v-col
