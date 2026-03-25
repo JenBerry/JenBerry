@@ -53,6 +53,9 @@ const handleHdrChange = (e: MediaQueryListEvent) => {
 };
 
 const setUpAnimation = (spiralGroup: SVGGElement, wrapper: HTMLElement) => {
+  if (ctx) {
+    ctx.revert();
+  }
   ctx = gsap.context(() => {
     const introRotation = -150;
     gsap.to(spiralGroup, {
@@ -78,10 +81,10 @@ const setUpAnimation = (spiralGroup: SVGGElement, wrapper: HTMLElement) => {
 };
 
 watch(
-  () => props.wrapper,
-  (newWrapper) => {
-    if (spiralGroup.value && newWrapper) {
-      setUpAnimation(spiralGroup.value, newWrapper);
+  [() => props.wrapper, spiralGroup],
+  ([newWrapper, newSpiralGroup]) => {
+    if (newSpiralGroup && newWrapper) {
+      setUpAnimation(newSpiralGroup, newWrapper);
     }
   },
   { immediate: true },
