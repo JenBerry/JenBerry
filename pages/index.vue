@@ -3,49 +3,48 @@
     v-container
       section.d-flex.flex-column.justify-center.align-center(style="min-height:100vh")
   
-        div
+        div(style="z-index:2")
    
           h1.text-h4.text-md-h2.mb-2.text-center.pt-16 Jen Berry
           h2.text-h5.text-md-h3.mb-4.text-center.text-orange Web Development
 
-        div
-          v-img.rounded-circle.mx-auto(v-if="hdr" src="/public/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
-          v-img.rounded-circle.mx-auto(v-else src="/public/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300")
+        ProfileImage
 
-        div.text-center.w-lg-66.mx-auto
+
+        div.text-center.w-lg-66.mx-auto(style="z-index: 2;")
           p.text-h5.text-md-h4.pt-8.pb-8 Building Modern Reactive Web Applications.
 
-        div.text-center.w-75.w-md-100.pb-8
+        div.text-center.w-75.w-md-100.pb-8(style="z-index: 2;")
           v-row.d-flex.justify-center.flex-wrap
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/vue.svg")
+              v-img.w-75.mb-3(src="/img/skills/vue.svg")
               span.text-body-2 Vue.js
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/nuxt.svg")
+              v-img.w-75.mb-3(src="/img/skills/nuxt.svg")
               span.text-body-2 Nuxt.js
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/typescript.svg")
+              v-img.w-75.mb-3(src="/img/skills/typescript.svg")
               span.text-body-2 Type Script
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/gsap.svg")
+              v-img.w-75.mb-3(src="/img/skills/gsap.svg")
               span.text-body-2 GSAP.js
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/sass.svg")
+              v-img.w-75.mb-3(src="/img/skills/sass.svg")
               span.text-body-2 Sass
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/python.svg")
+              v-img.w-75.mb-3(src="/img/skills/python.svg")
               span.text-body-2 Python
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/flask.png")
+              v-img.w-75.mb-3(src="/img/skills/flask.png")
               span.text-body-2 Flask
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/postgres.svg")
+              v-img.w-75.mb-3(src="/img/skills/postgres.svg")
               span.text-body-2 Postgres
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/gcp.svg")
+              v-img.w-75.mb-3(src="/img/skills/gcp.svg")
               span.text-body-2 GCP
             v-col.d-flex.flex-column.justify-space-between.align-center(cols="3" md="2" lg="1")
-              v-img.w-75.mb-3(src="/public/img/skills/docker.svg")
+              v-img.w-75.mb-3(src="/img/skills/docker.svg")
               span.text-body-2 Docker
 
 
@@ -72,7 +71,7 @@
           p.text-h4 15+ years
         div.text-center.text-md-left
           h2.text-orange.mb-4.mt-16 Education:
-          v-img.mx-auto.mx-md-0.d-print-none(src="/public/img/logos/Cambridge_Logo.png" alt="University of Cambridge Logo" width="300")
+          v-img.mx-auto.mx-md-0.d-print-none(src="/img/logos/Cambridge_Logo.png" alt="University of Cambridge Logo" width="300")
           p Cambridge University.
           p 2.1 B.A. Hons. Cantab. - Natural Sciences 2009
 
@@ -149,25 +148,6 @@
 
 </template>
 <script setup lang="ts">
-const hdr = ref(false);
-let hdrQuery: MediaQueryList;
-
-const handleHdrChange = (e: MediaQueryListEvent) => {
-  hdr.value = e.matches;
-};
-
-onMounted(() => {
-  hdrQuery = window.matchMedia("(dynamic-range: high)");
-  hdr.value = hdrQuery.matches;
-  hdrQuery.addEventListener("change", handleHdrChange);
-});
-
-onBeforeUnmount(() => {
-  if (hdrQuery) {
-    hdrQuery.removeEventListener("change", handleHdrChange);
-  }
-});
-
 // const data = useFetch("https://craft.ddev.site/api", {
 //   method: "post",
 //   body: { query: graphqlQuery, vairables: { id: "test_id" } },
