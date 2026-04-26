@@ -4,9 +4,9 @@
       a#home
       v-app-bar.d-print-none(density="compact")
         v-toolbar-title
-          div
+          ImageStack
             v-img(v-if="hdr" :src="'/img/jjmb-hdr-sm.avif'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
-            v-img(v-else :src="'/img/jjmb-sm.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
+            v-img(:src="'/img/jjmb-sm.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
         v-spacer
         v-btn(v-for="item in menu" v-show="mdAndUp" :href="item.link") {{ item.name }}
         v-row.flex-grow-0.h-100.mx-4.contact-icons
