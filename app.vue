@@ -4,7 +4,7 @@
       a#home
       v-app-bar.d-print-none(density="compact")
         v-toolbar-title
-          ImageStack
+          ImageStack(width="4rem" height="2rem")
             v-img(v-if="hdr" :src="'/img/jjmb-hdr-sm.avif'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
             v-img(:src="'/img/jjmb-sm.png'" alt="JJMB" aspect-ratio="2/1" cover height="2rem" width="4rem")
         v-spacer

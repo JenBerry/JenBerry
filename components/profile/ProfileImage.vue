@@ -9,7 +9,7 @@ div.profile-image
           path(:d="spiralPath" fill="none" stroke="white" stroke-width="25" stroke-linecap="round")
     image(href="/img/portfolio_radial_bg.svg" width="1200" height="1200" mask="url(#spiral-mask)")
     image(href="/img/portfolio_radial_bg.svg" width="1200" height="1200" mask="url(#spiral-mask)" transform="rotate(-1 600 600)")
-  ImageStack
+  ImageStack(width="300px" height="300px")
     v-img.rounded-circle.mx-auto.profile-image-img(v-if="hdr" src="/img/JJMB_kalisti_sm-hdr.avif" alt="Jennifer Berry" aspect-ratio="1" cover width="300" height="300")
     v-img.rounded-circle.mx-auto.profile-image-img(src="/img/JJMB_kalisti_sm.jpg" alt="Jennifer Berry" aspect-ratio="1" cover width="300" height="300")
 </template>
